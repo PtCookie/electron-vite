@@ -1,13 +1,18 @@
-import { env, platform } from "node:process";
 import { app, BrowserWindow } from "electron";
-import { join } from "path";
+import check from "electron-squirrel-startup";
+import { dirname, join } from "node:path";
+import { env, platform } from "node:process";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Forge's Vite plugin constants.
 declare const MAIN_WINDOW_VITE_NAME: string;
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require("electron-squirrel-startup")) {
+if (check) {
   app.quit();
 }
 

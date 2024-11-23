@@ -1,4 +1,3 @@
-import type { ForgeConfig } from "@electron-forge/shared-types";
 import { MakerSquirrel } from "@electron-forge/maker-squirrel";
 import { MakerDMG } from "@electron-forge/maker-dmg";
 import { MakerAppImage } from "@reforged/maker-appimage";
@@ -6,7 +5,8 @@ import { VitePlugin } from "@electron-forge/plugin-vite";
 import { FusesPlugin } from "@electron-forge/plugin-fuses";
 import { FuseV1Options, FuseVersion } from "@electron/fuses";
 
-const config: ForgeConfig = {
+/** @type {import("@electron-forge/shared-types").ForgeConfig} */
+const config = {
   packagerConfig: {
     asar: true,
   },
