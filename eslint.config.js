@@ -1,4 +1,4 @@
-import path from "node:path";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import globals from "globals";
 import pluginJs from "@eslint/js";
@@ -8,8 +8,8 @@ import pluginReact from "eslint-plugin-react";
 import pluginImport from "eslint-plugin-import";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const gitignorePath = path.resolve(__dirname, ".gitignore");
+const __dirname = dirname(__filename);
+const gitignorePath = resolve(__dirname, ".gitignore");
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [

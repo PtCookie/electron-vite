@@ -2202,6 +2202,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "date-fns@npm:4.1.0"
+  checksum: 10c0/b79ff32830e6b7faa009590af6ae0fb8c3fd9ffad46d930548fbb5acf473773b4712ae887e156ba91a7b3dc30591ce0f517d69fd83bd9c38650fdc03b4e0bac8
+  languageName: node
+  linkType: hard
+
 "debug@npm:2.6.9, debug@npm:^2.2.0":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
@@ -2382,6 +2389,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"electron-log@npm:^5.2.2":
+  version: 5.2.2
+  resolution: "electron-log@npm:5.2.2"
+  checksum: 10c0/a6003d14e35c06639de3e2b079b8cd50e1cdc04eda9c750360607381f5f31ae4745e8344c4036db6d7147048810c9ecab49e2d99e304656089cb01bfc1813426
+  languageName: node
+  linkType: hard
+
 "electron-squirrel-startup@npm:^1.0.1":
   version: 1.0.1
   resolution: "electron-squirrel-startup@npm:1.0.1"
@@ -2409,7 +2423,9 @@ __metadata:
     "@types/node": "npm:^20.0.0"
     "@types/react": "npm:^18.3.0"
     "@types/react-dom": "npm:^18.3.0"
+    date-fns: "npm:^4.1.0"
     electron: "npm:33.2.0"
+    electron-log: "npm:^5.2.2"
     electron-squirrel-startup: "npm:^1.0.1"
     eslint: "npm:^9.15.0"
     eslint-plugin-import: "npm:^2.25.0"

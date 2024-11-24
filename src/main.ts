@@ -3,6 +3,9 @@ import check from "electron-squirrel-startup";
 import { dirname, join } from "node:path";
 import { env, platform } from "node:process";
 import { fileURLToPath } from "node:url";
+import { formatISO } from "date-fns";
+
+import { logger } from "./lib/logger.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -18,6 +21,8 @@ if (check) {
 
 // Add Chromium flag as workaround for Wayland desktop with NVIDIA GPU.
 if (platform === "linux" && env.XDG_SESSION_TYPE === "wayland") {
+  logger.silly(`Wayland detected.`);
+
   app.commandLine.appendSwitch("ozone-platform-hint", "auto");
   app.commandLine.appendSwitch("disable-accelerated-video-decode");
   app.commandLine.appendSwitch("enable-wayland-ime");
@@ -47,7 +52,11 @@ function createWindow(): void {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on("ready", createWindow);
+app.on("ready", async () => {
+  logger.debug(`${app.getName()} v${app.getVersion()} is ready at ${formatISO(new Date())}.`);
+
+  createWindow();
+});
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
