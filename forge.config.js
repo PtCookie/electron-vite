@@ -23,7 +23,7 @@ const config = {
           target: "main",
         },
         {
-          entry: "src/preload.ts",
+          entry: "app/ipc/preload.ts",
           config: "vite.preload.config.ts",
           target: "preload",
         },

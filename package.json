@@ -27,6 +27,7 @@
         "format": "prettier --write ."
     },
     "dependencies": {
+        "@tanstack/react-router": "^1.82.2",
         "date-fns": "^4.1.0",
         "electron-log": "^5.2.2",
         "electron-squirrel-startup": "^1.0.1",
@@ -44,6 +45,8 @@
         "@eslint/compat": "^1.2.3",
         "@eslint/js": "^9.15.0",
         "@reforged/maker-appimage": "^4.0.2",
+        "@tanstack/router-devtools": "^1.82.2",
+        "@tanstack/router-plugin": "^1.81.9",
         "@types/electron-squirrel-startup": "^1.0.2",
         "@types/node": "^20.0.0",
         "@types/react": "^18.3.0",

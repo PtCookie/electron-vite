@@ -5,7 +5,8 @@ import { env, platform } from "node:process";
 import { fileURLToPath } from "node:url";
 import { formatISO } from "date-fns";
 
-import { logger } from "./lib/logger.js";
+import ipcMain from "./ipc/main.js";
+import { logger } from "../lib/logger.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -77,3 +78,4 @@ app.on("activate", () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+ipcMain();
