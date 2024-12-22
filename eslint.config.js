@@ -19,7 +19,6 @@ export default [
   pluginJs.configs.recommended,
   ...tsEslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  pluginReact.configs.flat["jsx-runtime"],
   { settings: { react: { version: "detect" } } },
   pluginImport.flatConfigs.electron,
   pluginImport.flatConfigs.react,
