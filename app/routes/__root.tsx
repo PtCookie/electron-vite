@@ -14,13 +14,18 @@ const TanStackRouterDevtools =
 
 export const Route = createRootRoute({
   component: () => (
-    <>
-      <div>
-        <Link to="/">Home</Link> <Link to="/about">About</Link>
+    <div className="max-w-2xl m-auto p-8">
+      <div className="flex gap-4">
+        <Link className="text-xl text-blue-700" to="/">
+          Home
+        </Link>
+        <Link className="text-xl text-blue-700" to="/about">
+          About
+        </Link>
       </div>
-      <hr />
+      <hr className="my-2" />
       <Outlet />
       <TanStackRouterDevtools />
-    </>
+    </div>
   ),
 });

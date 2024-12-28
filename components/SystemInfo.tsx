@@ -7,7 +7,7 @@ type Props = {
 
 export function SystemInfo({ platform, arch }: Props) {
   return (
-    <ul>
+    <ul className="p-6 list-disc">
       <li>{platform}</li>
       <li>{arch}</li>
     </ul>
