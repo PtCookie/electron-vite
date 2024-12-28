@@ -6,6 +6,7 @@ import { includeIgnoreFile } from "@eslint/compat";
 import tsEslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import pluginImport from "eslint-plugin-import";
+import pluginRouter from "@tanstack/eslint-plugin-router";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -22,4 +23,5 @@ export default [
   { settings: { react: { version: "detect" } } },
   pluginImport.flatConfigs.electron,
   pluginImport.flatConfigs.react,
+  ...pluginRouter.configs["flat/recommended"],
 ];
