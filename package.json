@@ -14,7 +14,7 @@
         "email": "me@ptcookie.net",
         "url": "https://github.com/PtCookie"
     },
-    "main": ".vite/build/main.js",
+    "main": ".vite/build/index.js",
     "packageManager": "yarn@4.5.1",
     "type": "module",
     "scripts": {

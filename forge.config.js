@@ -28,7 +28,7 @@ export default {
       build: [
         {
           // `entry` is just an alias for `build.lib.entry` in the corresponding file of `config`.
-          entry: "app/main.ts",
+          entry: "app/index.ts",
           config: "vite.main.config.ts",
         },
         {
