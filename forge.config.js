@@ -6,12 +6,21 @@ import { FusesPlugin } from "@electron-forge/plugin-fuses";
 import { FuseV1Options, FuseVersion } from "@electron/fuses";
 
 /** @type {import("@electron-forge/shared-types").ForgeConfig} */
-const config = {
+export default {
   packagerConfig: {
     asar: true,
   },
   rebuildConfig: {},
-  makers: [new MakerSquirrel(), new MakerDMG(), new MakerAppImage()],
+  makers: [
+    new MakerSquirrel(),
+    new MakerDMG(),
+    new MakerAppImage({
+      options: {
+        name: "electron-app",
+        AppImageKitRelease: "continuous",
+      },
+    }),
+  ],
   plugins: [
     new VitePlugin({
       // `build` can specify multiple entry builds, which can be Main process, Preload scripts, Worker process, etc.
@@ -47,5 +56,3 @@ const config = {
     }),
   ],
 };
-
-export default config;
