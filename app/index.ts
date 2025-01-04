@@ -11,10 +11,6 @@ import { logger } from "../lib/logger.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Forge's Vite plugin constants.
-declare const MAIN_WINDOW_VITE_NAME: string;
-declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
-
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (check) {
   app.quit();

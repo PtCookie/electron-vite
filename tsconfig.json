@@ -14,5 +14,7 @@
         "jsx": "react-jsx",
         "moduleResolution": "Bundler",
         "resolveJsonModule": true
-    }
+    },
+    "include": ["module.d.ts", "forge.env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
 }
